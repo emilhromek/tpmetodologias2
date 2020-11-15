@@ -11,7 +11,7 @@ Class {
 { #category : #'as yet unclassified' }
 Trasaccion class >> crearTrasaccion:unSector monto:unMonto [
 "Retorna una instancia de trasaccion inicializada"
-^(self new) crearTrasaccion:unSector monto:unMonto.
+^(self new) iniTrasaccion:unSector monto:unMonto
 ]
 
 { #category : #'as yet unclassified' }

@@ -2,10 +2,17 @@ Class {
 	#name : #ListaTrasacciones,
 	#superclass : #Object,
 	#instVars : [
-		'trasacciones'
+		'trasacciones',
+		'nombre'
 	],
 	#category : #EstacionDeServicio
 }
+
+{ #category : #'as yet unclassified' }
+ListaTrasacciones class >> crearListaTrasacciones:unNombre [
+"Retorna una instancia de trasaccion inicializada"
+^(self new) iniListaDeTrasacciones:unNombre
+]
 
 { #category : #'as yet unclassified' }
 ListaTrasacciones >> agregarTrasaccion:unaTrasaccion [
@@ -32,8 +39,16 @@ ListaTrasacciones >> buscarTrasaccionesReject:unSector minimo:unMinimo maximo:un
 ]
 
 { #category : #'as yet unclassified' }
+ListaTrasacciones >> iniListaDeTrasacciones:unNombre [
+"Inicializa una instancia de Lista de trasacciones"
+nombre:=unNombre.
+trasacciones:= OrderedCollection new.
+]
+
+{ #category : #'as yet unclassified' }
 ListaTrasacciones >> sumarMontosDeTrasacciones [
 "Con esto sumamos todas las ventas de los sectores de la estacion"
-trasacciones collect: [:unaTrasaccion | unaTrasaccion verMonto].
+
+^ (trasacciones collect: [:unaTrasaccion | unaTrasaccion verMonto]) sum.
 
 ]

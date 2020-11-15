@@ -1,9 +1,9 @@
 Class {
-	#name : #Vehiculo,
+	#name : #Producto,
 	#superclass : #Object,
 	#instVars : [
-		'porcentaje_combustible',
-		'ruedas'
+		'codigo',
+		'descripcion'
 	],
 	#category : #EstacionDeServicio
 }
