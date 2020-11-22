@@ -24,6 +24,7 @@ empleados add:unEmpleado
 Lavadero >> iniLavadero:unNombreDeSector [
 "Inicializa una instancia de Lavadero"
 nombredesector:=unNombreDeSector.
+empleados:= OrderedCollection new.
 ]
 
 { #category : #'as yet unclassified' }

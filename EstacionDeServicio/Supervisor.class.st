@@ -10,14 +10,14 @@ Class {
 { #category : #'as yet unclassified' }
 Supervisor class >> crearSupervisor: unNombreDeEmpleado apellido:unApellido dni:unDni cargo:unCargo [
 "Retorna una instancia de empleado inicializada"
-^(self new) iniEmpleado:unNombreDeEmpleado apellido:unApellido dni:unDni cargo:unCargo.
+^(self new) iniSupervisor:unNombreDeEmpleado apellido:unApellido dni:unDni cargo:unCargo.
 
 	
 
 ]
 
 { #category : #'as yet unclassified' }
-Supervisor >> iniEmpleado:unNombreDeSupervisor apellido:unApellido dni:unDni cargo:unCargo [ 
+Supervisor >> iniSupervisor:unNombreDeSupervisor apellido:unApellido dni:unDni cargo:unCargo [ 
 "Inicializa una instancia de Supervisor"
 nombre:=unNombreDeSupervisor.
 apellido:=unApellido.

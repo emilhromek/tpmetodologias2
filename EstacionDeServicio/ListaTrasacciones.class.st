@@ -24,8 +24,6 @@ trasacciones add:unaTrasaccion
 ListaTrasacciones >> buscarAlgunaTrasaccion:unSector minimo:unMinimo maximo:unMaximo [
 
 ^ trasacciones detect: [:unaTrasaccion | unaTrasaccion verSector=unSector & (unaTrasaccion verMonto >= unMinimo & unaTrasaccion verMonto <= unMaximo)]
-
-ifNone: [^ nil].
 ]
 
 { #category : #'as yet unclassified' }
@@ -34,8 +32,8 @@ ListaTrasacciones >> buscarTrasacciones:unSector minimo:unMinimo maximo:unMaximo
 ]
 
 { #category : #enumerating }
-ListaTrasacciones >> buscarTrasaccionesReject:unSector minimo:unMinimo maximo:unMaximo [
-^ trasacciones reject: [:unaTrasaccion | unaTrasaccion verSector=unSector & (unaTrasaccion verMonto >= unMinimo & unaTrasaccion verMonto <= unMaximo)]
+ListaTrasacciones >> buscarTrasaccionesReject: unMinimo maximo:unMaximo [
+^ trasacciones reject: [:unaTrasaccion | (unaTrasaccion verMonto >= unMinimo & unaTrasaccion verMonto <= unMaximo)]
 ]
 
 { #category : #'as yet unclassified' }
